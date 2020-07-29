@@ -4,8 +4,6 @@
 <meta charset="utf-8">
 <title>INDEXASIA</title>
 <link href="style.css" rel="stylesheet" type="text/css">
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-
 </head>
 
 <body>
@@ -122,24 +120,23 @@
 		<div class="box"><a href="example_01-2.html"><img src="images/example_02.png" width="360" height="202" alt=""/ ></a><a href="example_01-2.html" >泰國啤酒產業口碑環境分析報告 </a>
 		<div class="date">	2020年2月	</div></div>
 		
-		<div class="box" style="margin-right: 0;"><a href="example_01-3.html"><img src="images/example_03.png" width="360" height="202" alt=""/></a><a href="example_01-3.html">馬來西亞電商產業口碑分析報告</a>
+		<div class="box" style="margin-right: 0;"><a href="example_01-3.html"><img src="images/example_03.png" width="360" height="202" alt=""/ ></a><a href="example_01-3.html">馬來西亞電商產業口碑分析報告</a>
 		<div class="date">	2020年1月	</div></div>
 		
 		 <div style="clear: both;"></div>
 		
 		</div>
-		<form method="POST" action="https://www.i-buzz.com.tw/user/contact_data">
-			<input type="hidden" name="test" value="test123">
+	
 <div id="footer1"><div id="footer1content">
 	
-	<p>持續關注東南亞市場</p><input type="email" id="nickname" name="nickname" value="在這裡輸入您的MAIL,以獲得最新資訊"
+	<p>持續關注東南亞市場</p><input type="text" id="nickname" name="nickname" value="在這裡輸入您的MAIL,以獲得最新資訊"
 
 onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
 
-onBlur="if(!value){value=defaultValue;this.style.color='#999'}" class="input" required></input><button class="bigbtn2" type="submit" style="border: 0px;line-height: 0px;">訂閱</button> <div class="g-recaptcha" id="google_recaptcha"></div>
+onBlur="if(!value){value=defaultValue;this.style.color='#999'}" class="input"></input><a href="#" class="bigbtn2">訂閱</a>
 
 	</div>
-	</div></form>
+	</div>
 <div id="footer2">
   <div id="footer2content"><a href="about.html">公司資訊</a><a href="contact.html">聯絡我們</a><a href="partner.html">成為夥伴</a><a href="#"><img src="images/fbicon.png" width="35" height="35" alt=""/></a></div>
 	<div id="footercontent2">	
@@ -148,35 +145,4 @@ onBlur="if(!value){value=defaultValue;this.style.color='#999'}" class="input" re
 	
 	</div>
 </body>
-
 </html>
-
-<script>
- var onloadCallback = function() {
-        grecaptcha.render('google_recaptcha', {
-        'sitekey' : '6LehK6gUAAAAAJtHSZ1WeEx99zR1J8RMvGF0m-ZG',
-      });
-    };
-$(function () {
-  //Form Submit Event
-  $("form").submit(function () {
-    event.preventDefault();
-    var rcres = grecaptcha.getResponse();
-    if(rcres.length){
-        $('form')[0].submit();
-        grecaptcha.reset();
-    }else{
-        showHideMsg("Please verify reCAPTCHA");
-    }
-  });
-  //Show/Hide Message
-  function showHideMsg(message){
-    $("#message-wrap").stop()
-    $("#message-wrap").slideDown()
-    $("#message-wrap").html(message)
-    $('.g-recaptcha').css('border', '1px solid red');
-  }
-
-});
-
-</script>
